@@ -2,13 +2,19 @@ import React from 'react';
 declare type propTypes = {
     id?: string;
     className?: string;
-    ref?: React.Ref<DrawerRef>;
     style?: React.CSSProperties;
-    onOpen?: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void);
+    onOpen?: () => void;
+    onClose?: () => void;
+    show?: boolean;
+    width?: string;
+    title?: JSX.Element | string | null;
 };
-export declare type DrawerRef = {
-    openDrawer: () => void;
-    closeDrawer: () => void;
-};
-declare const Drawer: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<propTypes>, "style" | "className" | "children" | "id" | "onOpen"> & React.RefAttributes<DrawerRef>>;
+export interface IDrawerRef {
+    open: () => void;
+    close: () => void;
+    toggle: () => void;
+}
+declare const Drawer: React.ForwardRefExoticComponent<propTypes & {
+    children?: React.ReactNode;
+} & React.RefAttributes<IDrawerRef>>;
 export default Drawer;

@@ -3,7 +3,6 @@ import { ColorSchemes } from '../../types/Color';
 declare type propTypes = {
     id?: string;
     className?: string;
-    ref?: React.Ref<HTMLDivElement>;
     style?: React.CSSProperties;
     onDismiss?: () => void;
     title: string;
@@ -12,5 +11,7 @@ declare type propTypes = {
     animationDirection?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
     autoDismissTimeout?: number;
 };
-declare const Toast: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<propTypes>, "type" | "animationDirection" | "style" | "title" | "className" | "children" | "id" | "show" | "onDismiss" | "autoDismissTimeout"> & React.RefAttributes<HTMLDivElement>>;
+declare const Toast: React.ForwardRefExoticComponent<propTypes & {
+    children?: React.ReactNode;
+} & React.RefAttributes<HTMLDivElement>>;
 export default Toast;

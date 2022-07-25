@@ -29,9 +29,10 @@ declare type propTypes = {
     rowStyle?: React.CSSProperties;
     loading?: boolean;
     renderEmptyList?: React.ReactElement | null;
-    ref?: React.Ref<HTMLTableElement>;
     total?: number;
     showNumberLength?: number;
 };
-declare const Table: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<propTypes>, "data" | "style" | "className" | "children" | "showNumberLength" | "pageSize" | "columnHeadings" | "autoSort" | "currentPage" | "onSortData" | "onPageChange" | "onNextPage" | "onPreviousPage" | "onRowItemClick" | "rowClass" | "renderOnRowHover" | "hoverWrapperClassName" | "headerRowClass" | "rowStyle" | "loading" | "renderEmptyList" | "total"> & React.RefAttributes<HTMLTableElement>>;
+declare const Table: React.ForwardRefExoticComponent<propTypes & {
+    children?: React.ReactNode;
+} & React.RefAttributes<HTMLTableElement>>;
 export default Table;

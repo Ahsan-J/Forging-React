@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconNames } from '../Icon';
 import { ColorSchemes } from '../../types/Color';
 interface propTypes {
     className?: string;
@@ -10,8 +11,8 @@ interface propTypes {
     title?: string;
     accept?: Array<string>;
     type?: ColorSchemes;
-    iconName?: string;
+    iconName?: IconNames;
     onChange?: (files: Array<File>) => void;
 }
-declare const Uploader: React.MemoExoticComponent<(props: React.PropsWithChildren<propTypes>) => JSX.Element>;
+declare const Uploader: React.NamedExoticComponent<React.PropsWithChildren<propTypes>>;
 export default Uploader;

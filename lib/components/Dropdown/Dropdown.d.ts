@@ -1,11 +1,12 @@
 import React from "react";
 import { ColorSchemes } from "../../types/Color";
+import { IconNames } from "../Icon";
 export interface IDropdownInstance {
     value: string;
 }
 export interface IDropdownItem {
     label: string;
-    icon?: string;
+    icon?: IconNames;
 }
 declare type propTypes = {
     defaultKey?: string;
@@ -18,13 +19,13 @@ declare type propTypes = {
     placeholder?: string;
     style?: React.CSSProperties;
     className?: string;
-    ref?: React.Ref<IDropdownInstance>;
     name?: string;
     label?: string;
     type?: ColorSchemes;
-    iconName?: string;
+    iconName?: IconNames;
     outline?: boolean;
     disabled?: boolean;
+    value?: string;
 };
-declare const Dropdown: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<propTypes>, "type" | "outline" | "disabled" | "label" | "style" | "className" | "name" | "children" | "iconName" | "onItemClick" | "placeholder" | "defaultKey" | "options" | "renderItem" | "renderSelectedValue"> & React.RefAttributes<IDropdownInstance>>;
+declare const Dropdown: React.ForwardRefExoticComponent<propTypes & React.RefAttributes<IDropdownInstance>>;
 export default Dropdown;

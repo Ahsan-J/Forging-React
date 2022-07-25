@@ -1,20 +1,19 @@
 import React from 'react';
-export declare type NavItemType = {
+export interface INavItem {
     id?: string | number;
     url?: string;
     title: string;
-    dropdownItems?: Array<NavItemType>;
-};
+    dropdownItems?: Array<INavItem>;
+}
 declare type propTypes = {
     className?: string;
-    data: Array<NavItemType>;
+    data: Array<INavItem>;
     type?: "NavBar" | "Tab";
-    renderListItem?: (item: NavItemType, index?: number) => (JSX.Element | null);
-    ref?: React.Ref<HTMLUListElement>;
-    onItemClose?: (item: NavItemType) => void;
+    renderListItem?: (item: INavItem, index?: number) => (JSX.Element | null);
+    onItemClose?: (item: INavItem) => void;
     onAddItem?: () => void;
-    active?: NavItemType['title'];
-    onClick?: (title: NavItemType['title'], event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+    active?: INavItem['title'];
+    onClick?: (title: INavItem['title'], event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 };
-declare const NavBarList: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<propTypes>, "type" | "active" | "data" | "className" | "children" | "onClick" | "renderListItem" | "onItemClose" | "onAddItem"> & React.RefAttributes<HTMLUListElement>>;
+declare const NavBarList: React.ForwardRefExoticComponent<propTypes & React.RefAttributes<HTMLUListElement>>;
 export default NavBarList;

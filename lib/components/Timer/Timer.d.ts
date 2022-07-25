@@ -5,9 +5,11 @@ interface propTypes {
     renderTimer?: (duration: number) => JSX.Element | string | null;
     total?: number;
     play?: boolean;
+    duration?: number;
+    formatDuration?: (d: number) => string;
 }
 export interface ITimerInstance {
-    duration: (d: number) => number | void;
+    duration: number;
     id: string;
     formatDuration: (d: number) => string;
     play: () => void;

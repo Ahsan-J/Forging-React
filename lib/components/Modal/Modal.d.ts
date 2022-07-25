@@ -5,7 +5,6 @@ export interface IModalRef {
 declare type propTypes = {
     id?: string;
     className?: string;
-    ref?: React.Ref<IModalRef>;
     style?: React.CSSProperties;
     onDismiss?: () => void;
     animationDirection?: "right" | "left" | "top" | "bottom";
@@ -14,5 +13,7 @@ declare type propTypes = {
     onBackdrop?: (event?: Event, ref?: React.Ref<IModalRef>) => void;
     show?: boolean;
 };
-declare const Modal: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<propTypes>, "animationDirection" | "style" | "className" | "children" | "id" | "show" | "onDismiss" | "showChildren" | "wrapper" | "onBackdrop"> & React.RefAttributes<IModalRef>>;
+declare const Modal: React.ForwardRefExoticComponent<propTypes & {
+    children?: React.ReactNode;
+} & React.RefAttributes<IModalRef>>;
 export default Modal;

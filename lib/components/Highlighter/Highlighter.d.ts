@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 declare type propType = {
     text: string;
     searchText: string;
@@ -7,5 +7,5 @@ declare type propType = {
     className?: string;
     color?: string;
 };
-declare const Highlighter: React.MemoExoticComponent<(props: PropsWithChildren<propType>) => JSX.Element>;
+declare const Highlighter: React.NamedExoticComponent<propType>;
 export default Highlighter;

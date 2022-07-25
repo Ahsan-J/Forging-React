@@ -9,5 +9,5 @@ declare type propTypes = {
     className?: string;
     style?: React.CSSProperties;
 };
-declare const Pagination: React.MemoExoticComponent<(props: React.PropsWithChildren<propTypes>) => JSX.Element>;
+declare const Pagination: React.NamedExoticComponent<propTypes>;
 export default Pagination;

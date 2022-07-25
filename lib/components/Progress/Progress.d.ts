@@ -13,7 +13,5 @@ declare type propTypes = {
 export interface IProgressInstance {
     setProgress: React.Dispatch<React.SetStateAction<number>>;
 }
-declare const Progress: React.ForwardRefExoticComponent<propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<IProgressInstance>>;
+declare const Progress: React.ForwardRefExoticComponent<propTypes & React.RefAttributes<IProgressInstance>>;
 export default Progress;

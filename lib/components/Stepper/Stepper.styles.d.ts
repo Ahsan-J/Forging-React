@@ -1,4 +1,4 @@
-declare const _default: (props?: any) => {
+declare const _default: () => {
     container: object;
 };
 export default _default;

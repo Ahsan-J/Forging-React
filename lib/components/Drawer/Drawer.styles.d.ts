@@ -1,5 +1,6 @@
-declare const _default: (props?: any) => {
+declare const _default: () => {
     container: object;
-    openButton: object;
+    topContainer: object;
+    closeIcon: object;
 };
 export default _default;

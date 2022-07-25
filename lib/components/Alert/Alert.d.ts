@@ -1,14 +1,18 @@
 import React from 'react';
 import { ColorSchemes } from '../../types/Color';
+import { IconNames } from '../Icon';
 declare type propTypes = {
     id?: string;
     className?: string;
-    ref?: React.Ref<HTMLDivElement>;
     style?: React.CSSProperties;
     type?: ColorSchemes;
     onDismiss?: () => void;
     title: string;
+    show?: boolean;
+    renderIcon?: (iconName?: IconNames) => JSX.Element | string | null;
     autoDismissTimeout?: number;
 };
-declare const Alert: React.ForwardRefExoticComponent<Pick<React.PropsWithChildren<propTypes>, "type" | "style" | "title" | "className" | "children" | "id" | "onDismiss" | "autoDismissTimeout"> & React.RefAttributes<HTMLDivElement>>;
+declare const Alert: React.ForwardRefExoticComponent<propTypes & {
+    children?: React.ReactNode;
+} & React.RefAttributes<HTMLDivElement>>;
 export default Alert;

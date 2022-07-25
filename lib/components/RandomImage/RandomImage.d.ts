@@ -4,5 +4,5 @@ declare type propTypes = {
     style?: React.CSSProperties;
     rectangleSize?: number;
 };
-declare const RandomImage: React.MemoExoticComponent<(props: React.PropsWithChildren<propTypes>) => JSX.Element>;
+declare const RandomImage: React.MemoExoticComponent<(props: propTypes) => JSX.Element>;
 export default RandomImage;

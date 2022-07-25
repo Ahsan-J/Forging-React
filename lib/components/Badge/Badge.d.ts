@@ -1,8 +1,7 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import { ColorSchemes } from "../../types/Color";
 declare type propTypes = {
     onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
-    text: string;
     className?: string;
     style?: React.CSSProperties;
     type?: ColorSchemes;
@@ -10,5 +9,5 @@ declare type propTypes = {
     rounded?: boolean;
     onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
-declare const Badge: React.MemoExoticComponent<(props: PropsWithChildren<propTypes>) => JSX.Element>;
+declare const Badge: React.NamedExoticComponent<React.PropsWithChildren<propTypes>>;
 export default Badge;

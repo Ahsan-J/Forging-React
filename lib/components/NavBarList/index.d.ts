@@ -1,3 +1,2 @@
-import NavBarList, { NavItemType as t } from './NavBarList';
-export declare type NavItemType = t;
+import NavBarList from './NavBarList';
 export default NavBarList;

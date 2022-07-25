@@ -22,5 +22,5 @@ declare type propTypes = {
     onItemClick?: (key: string, value: IDropdownItem) => void;
     renderDropdownItem?: (value: IDropdownItem, key: string) => React.ReactElement;
 };
-declare const AutoComplete: React.NamedExoticComponent<React.PropsWithChildren<propTypes>>;
+declare const AutoComplete: React.NamedExoticComponent<propTypes>;
 export default AutoComplete;

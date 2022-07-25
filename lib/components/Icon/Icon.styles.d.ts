@@ -1,4 +1,4 @@
-declare const _default: (state?: {}) => {
+declare const _default: () => {
     buttonWrapper: object;
 };
 export default _default;
