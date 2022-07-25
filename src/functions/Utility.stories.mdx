@@ -1,0 +1,171 @@
+import { Meta } from '@storybook/addon-docs';
+import { FUNCTION_PREFIX } from '../helper/constant';
+import { linkTo } from '@storybook/addon-links';
+
+<Meta title={`${FUNCTION_PREFIX}/Utility`} />
+
+# Utility Helping Function
+
+Utility function help perform common task in the application that are essential to speedup the development process.
+These functions are generic in nature and perform essentail complex task that takes time to construct.
+
+## Get JSON representation of formdata instance
+### Syntax: unmarshalFormData(formData)
+
+#### Parameters
+- formData: an instance of FormData
+
+#### Return Value
+- An Object (type: any) containing FormData values by keys
+
+#### Usage:
+
+```
+// Creating a new FormData instance
+const formData = new FormData(); 
+
+// Adding value "bar" against key "foo"
+formData.append("foo", "bar") 
+
+// Returns Object {"foo": "bar"}
+unmarshalFormData(formData) 
+```
+
+---
+
+## Create Slices of Array of given size
+### Syntax: chunkArray(array, size)
+
+#### Parameters
+- array: An array of data (type: any) to create slices of
+- size: The length of each slice 
+
+#### Return Value
+- An Array of Slices (type: any) of given size
+
+#### Usage:
+
+```
+const sampleArray = [
+    { "id": "0", "name": "Adventure", "type": "Fiction" },
+    { "id": "1", "name": "AlternateHistory", "type": "Fiction" },
+    { "id": "10", "name": "Fantasy", "type": "Fiction" },
+    { "id": "11", "name": "HistoricalFiction", "type": "Fiction"},
+    { "id": "12", "name": "Horror", "type": "Fiction" },
+    { "id": "13", "name": "Mystery", "type": "Fiction" },
+    { "id": "14", "name": "Paranormal", "type": "Fiction"},
+    { "id": "15", "name": "Romance", "type": "Fiction"},
+    { "id": "16", "name": "Poetry", "type": "Fiction" },
+    { "id": "17", "name": "Political", "type": "Fiction"},
+    { "id": "18", "name": "Satire", "type": "Fiction"},
+    { "id": "19", "name": "ScienceFiction", "type": "Fiction" }
+] 
+
+// creating slices of 4 items
+const output = chunkArray(sampleArray, 4)
+
+/* * *
+  * Output: 
+    [
+        [{"id":"0","name":"Adventure","type":"Fiction"},{"id":"1","name":"AlternateHistory","type":"Fiction"},{"id":"10","name":"Fantasy","type":"Fiction"},{"id":"11","name":"HistoricalFiction","type":"Fiction"}],
+        [{"id":"12","name":"Horror","type":"Fiction"},{"id":"13","name":"Mystery","type":"Fiction"},{"id":"14","name":"Paranormal","type":"Fiction"},{"id":"15","name":"Romance","type":"Fiction"}],
+        [{"id":"16","name":"Poetry","type":"Fiction"},{"id":"17","name":"Political","type":"Fiction"},{"id":"18","name":"Satire","type":"Fiction"},{"id":"19","name":"ScienceFiction","type":"Fiction"}],
+    ]
+* * */
+
+```
+
+---
+
+## Generate array of number
+### Syntax: range(startIndex, lastIndex, step)
+
+#### Parameters
+- startIndex: The starting number
+- lastIndex: The ending number
+- step: value to increment in startIndex till it reaches lastIndex
+
+#### Return Value
+- An Array of number containing value between startIndex and lastIndex
+
+#### Usage:
+
+```
+// creating array containing values between 0 and 10
+range(0, 10); // output: [0, 1, 2, ... 10]
+
+```
+---
+
+## Trigger Form Elements error
+### Syntax: triggerFormError(form, fields)
+
+#### Parameters
+- form: The ref of wrapping HTMLFormElement
+- fields: key value object with element name as key and error messages as value
+
+#### Return Value
+- void
+
+#### Usage:
+[See Implementation](/?path=/story/technique-form)
+
+---
+
+## Remove falsy value from Object
+### Syntax: cleanObject(data)
+
+#### Parameters
+- data: Object containing falsy values
+
+#### Return Value
+- data: Object with removed falsy values
+
+#### Usage:
+
+```
+let obj = {
+    name: "Ahsan",
+    email: "ahsan.ahmed99@ymail.com",
+    age: null,
+    address: undefined,
+}
+
+cleanObject(obj)
+/* * *
+* Output: {name: "Ahsan", email: "ahsan.ahmed99@ymail.com"}
+*/
+```
+---
+
+## Merge Array by keeping 'key' unique 
+### Syntax: mergeArrayByKey(des, src, key = "id")
+
+#### Parameters
+- des: The destination array to merge into
+- src: The source array to merge from
+- key: A value representing a property in array of objects that must be unique
+
+#### Return Value
+- An Array of combined values with 'key' value kept unique 
+
+#### Usage:
+```
+
+```
+---
+
+## Group Items by indexing with the value of 'key 
+### Syntax: groupBy(array, key)
+
+#### Parameters
+- array: The Array of object that needs to be grouped
+- key: The property of object in each iteration whose value will index the group
+
+#### Return Value
+- An Object indexed with value of 'key' with array of Objects that contains that value in its 'key' 
+
+#### Usage:
+```
+
+```

@@ -1,72 +1,66 @@
 import React from 'react';
-import { Alert } from '../../lib/components';
+import { Progress } from '../../lib/components';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ComponentType = typeof Alert;
+type ComponentType = typeof Progress;
 
 export default {
-    title: `${COMPONENT_PREFIX}/Alert`,
-    component: Alert,
+    title: `${COMPONENT_PREFIX}/Progress`,
+    component: Progress,
     args: {
-        title: "Alert",
-        show: true,
-        onDismiss: () => console.log("Here dismissed"),
+        total: 100,
+        progress: 75,
     },
     argTypes: {
-        title: { control: 'text' },
-        autoDismissTimeout: { control: ''},
-        onShow: { action: 'clicked' },
-        onDismiss: { action: 'dismissed' }
+        total: { control: "number", name: "Total", description: "Total value in number to calculate percentage against" },
+        progress: { control: "number", name: "Progress", description: "The Elapsed value to calculate percentage with" },
+        id: { control: 'text' },
+        striped: { control: "boolean", name: "Stripped", description: "Strip pattern on progress" },
+        animated: { control: "boolean", name: "Animated", description: "Animating the Progress" },
+        className: { control: 'text', name: 'Class', description: "Container Class for Progress" },
+        style: { control: 'object', name: "Style" },
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;
 
-const Template : ComponentStory<ComponentType> = (args) => <Alert {...args} />
+const Template: ComponentStory<ComponentType> = (args) => <Progress {...args} />
+
 
 export const Primary = Template.bind({});
 Primary.args = {
-    title: "Primary Alert",
     type: "primary",
 }
 export const Secondary = Template.bind({});
 Secondary.args = {
-    title: "Secondary Alert",
     type: "secondary",
 }
 export const Danger = Template.bind({});
 Danger.args = {
-    title: "Primary Alert",
     type: "danger",
 }
 export const Dark = Template.bind({});
 Dark.args = {
-    title: "Dark Alert",
     type: "dark",
 }
 export const Info = Template.bind({});
 Info.args = {
-    title: "Info Alert",
     type: "info",
 }
 export const Light = Template.bind({});
 Light.args = {
-    title: "Light Alert",
     type: "light",
 }
 export const Link = Template.bind({});
 Link.args = {
-    title: "Link Alert",
     type: "link",
 }
 export const Success = Template.bind({});
 Success.args = {
-    title: "Success Alert",
     type: "success",
 }
 
 export const Warning = Template.bind({});
 Warning.args = {
-    title: "Success Alert",
     type: "warning",
 }

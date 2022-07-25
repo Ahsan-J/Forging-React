@@ -1,72 +1,59 @@
 import React from 'react';
-import { Alert } from '../../lib/components';
+import { NavBar } from '../../lib/components';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ComponentType = typeof Alert;
+type ComponentType = typeof NavBar;
 
 export default {
-    title: `${COMPONENT_PREFIX}/Alert`,
-    component: Alert,
+    title: `${COMPONENT_PREFIX}/NavBar`,
+    component: NavBar,
     args: {
-        title: "Alert",
-        show: true,
-        onDismiss: () => console.log("Here dismissed"),
+        
     },
     argTypes: {
-        title: { control: 'text' },
-        autoDismissTimeout: { control: ''},
-        onShow: { action: 'clicked' },
-        onDismiss: { action: 'dismissed' }
+        id: { control: 'text' },
+        theme: {control: "select", options: ['dark', 'light'], name:"Theme", description: "Dark/Light Theme"},
+        fixed: {control: "select", options: ['bottom', 'top'], name: "Fixed", description: "If provided, fix the Navbar relative to parent container"},
+        size: {control: "select", options: ['large', 'medium', 'small', 'x-large', 'xx-large'], name: "Size", description: "Size of Navbar"},
+        className: {control: 'text', name: 'Class', description: "Container Class Navbar"},
+        style: { control: 'object', name: "Style" },  
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;
 
-const Template : ComponentStory<ComponentType> = (args) => <Alert {...args} />
+const Template : ComponentStory<ComponentType> = (args) => <NavBar {...args} />
 
 export const Primary = Template.bind({});
 Primary.args = {
-    title: "Primary Alert",
     type: "primary",
 }
 export const Secondary = Template.bind({});
 Secondary.args = {
-    title: "Secondary Alert",
     type: "secondary",
 }
 export const Danger = Template.bind({});
 Danger.args = {
-    title: "Primary Alert",
     type: "danger",
 }
 export const Dark = Template.bind({});
 Dark.args = {
-    title: "Dark Alert",
     type: "dark",
 }
 export const Info = Template.bind({});
 Info.args = {
-    title: "Info Alert",
     type: "info",
 }
 export const Light = Template.bind({});
 Light.args = {
-    title: "Light Alert",
     type: "light",
-}
-export const Link = Template.bind({});
-Link.args = {
-    title: "Link Alert",
-    type: "link",
 }
 export const Success = Template.bind({});
 Success.args = {
-    title: "Success Alert",
     type: "success",
 }
 
 export const Warning = Template.bind({});
 Warning.args = {
-    title: "Success Alert",
     type: "warning",
 }

@@ -1,0 +1,262 @@
+[
+    {
+        "id": "0",
+        "name": "Adventure",
+        "type": "Fiction"
+    },
+    {
+        "id": "1",
+        "name": "AlternateHistory",
+        "type": "Fiction"
+    },
+    {
+        "id": "10",
+        "name": "Fantasy",
+        "type": "Fiction"
+    },
+    {
+        "id": "11",
+        "name": "HistoricalFiction",
+        "type": "Fiction"
+    },
+    {
+        "id": "12",
+        "name": "Horror",
+        "type": "Fiction"
+    },
+    {
+        "id": "13",
+        "name": "Mystery",
+        "type": "Fiction"
+    },
+    {
+        "id": "14",
+        "name": "Paranormal",
+        "type": "Fiction"
+    },
+    {
+        "id": "15",
+        "name": "Romance",
+        "type": "Fiction"
+    },
+    {
+        "id": "16",
+        "name": "Poetry",
+        "type": "Fiction"
+    },
+    {
+        "id": "17",
+        "name": "Political",
+        "type": "Fiction"
+    },
+    {
+        "id": "18",
+        "name": "Satire",
+        "type": "Fiction"
+    },
+    {
+        "id": "19",
+        "name": "ScienceFiction",
+        "type": "Fiction"
+    },
+    {
+        "id": "2",
+        "name": "Anthology",
+        "type": "Fiction"
+    },
+    {
+        "id": "20",
+        "name": "ShortStory",
+        "type": "Fiction"
+    },
+    {
+        "id": "21",
+        "name": "Suspense",
+        "type": "Fiction"
+    },
+    {
+        "id": "22",
+        "name": "Thriller",
+        "type": "Fiction"
+    },
+    {
+        "id": "23",
+        "name": "Western",
+        "type": "Fiction"
+    },
+    {
+        "id": "24",
+        "name": "YoungAdult",
+        "type": "Fiction"
+    },
+    {
+        "id": "25",
+        "name": "Art",
+        "type": "NonFiction"
+    },
+    {
+        "id": "26",
+        "name": "Biography",
+        "type": "NonFiction"
+    },
+    {
+        "id": "27",
+        "name": "Business",
+        "type": "NonFiction"
+    },
+    {
+        "id": "28",
+        "name": "Crafts",
+        "type": "NonFiction"
+    },
+    {
+        "id": "29",
+        "name": "Cookbook",
+        "type": "NonFiction"
+    },
+    {
+        "id": "3",
+        "name": "Children",
+        "type": "Fiction"
+    },
+    {
+        "id": "30",
+        "name": "Diary",
+        "type": "NonFiction"
+    },
+    {
+        "id": "31",
+        "name": "Dictionary",
+        "type": "NonFiction"
+    },
+    {
+        "id": "32",
+        "name": "Encyclopedia",
+        "type": "NonFiction"
+    },
+    {
+        "id": "33",
+        "name": "Guide",
+        "type": "NonFiction"
+    },
+    {
+        "id": "34",
+        "name": "Health",
+        "type": "NonFiction"
+    },
+    {
+        "id": "35",
+        "name": "History",
+        "type": "NonFiction"
+    },
+    {
+        "id": "36",
+        "name": "HomeAndGarden",
+        "type": "NonFiction"
+    },
+    {
+        "id": "37",
+        "name": "Humor",
+        "type": "NonFiction"
+    },
+    {
+        "id": "38",
+        "name": "Journal",
+        "type": "NonFiction"
+    },
+    {
+        "id": "39",
+        "name": "Math",
+        "type": "NonFiction"
+    },
+    {
+        "id": "4",
+        "name": "Classic ",
+        "type": "Fiction"
+    },
+    {
+        "id": "40",
+        "name": "Memoir",
+        "type": "NonFiction"
+    },
+    {
+        "id": "41",
+        "name": "Philosophy",
+        "type": "NonFiction"
+    },
+    {
+        "id": "42",
+        "name": "Prayer",
+        "type": "NonFiction"
+    },
+    {
+        "id": "43",
+        "name": "Religion",
+        "type": "NonFiction"
+    },
+    {
+        "id": "44",
+        "name": "Textbook",
+        "type": "NonFiction"
+    },
+    {
+        "id": "45",
+        "name": "TrueCrime",
+        "type": "NonFiction"
+    },
+    {
+        "id": "46",
+        "name": "Review",
+        "type": "NonFiction"
+    },
+    {
+        "id": "47",
+        "name": "Science",
+        "type": "NonFiction"
+    },
+    {
+        "id": "48",
+        "name": "SelfHelp",
+        "type": "NonFiction"
+    },
+    {
+        "id": "49",
+        "name": "Sports",
+        "type": "NonFiction"
+    },
+    {
+        "id": "5",
+        "name": "ComicBook",
+        "type": "Fiction"
+    },
+    {
+        "id": "50",
+        "name": "Travel",
+        "type": "NonFiction"
+    },
+    {
+        "id": "51",
+        "name": "Autobiography",
+        "type": "NonFiction"
+    },
+    {
+        "id": "6",
+        "name": "ComingOfAge",
+        "type": "Fiction"
+    },
+    {
+        "id": "7",
+        "name": "Crime",
+        "type": "Fiction"
+    },
+    {
+        "id": "8",
+        "name": "Drama",
+        "type": "Fiction"
+    },
+    {
+        "id": "9",
+        "name": "Fairytale",
+        "type": "Fiction"
+    }
+]

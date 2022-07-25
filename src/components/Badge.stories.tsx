@@ -1,32 +1,27 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Button } from '../../lib/components';
-import iconsets from '../../lib/components/Icon/iconsets.js';
+import { Badge } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ButtonType = typeof Button
+type ButtonType = typeof Badge
 
 export default {
-    title: `${COMPONENT_PREFIX}/Button`,
-    component: Button,
+    title: `${COMPONENT_PREFIX}/Badge`,
+    component: Badge,
     argTypes: {
         id: { control: 'text' },
-        className: { control: 'text', name: 'Class', description: "Container Class for Button" },
-        iconName: { control: "select", name: "Icon Name", options: Object.keys(iconsets) },
-        outline: { control: 'boolean', defaultValue: false, name: "Outline" },
-        block: { control: 'boolean', defaultValue: true, name: "Block" },
-        size: { control: 'radio', name: "Size", options: ["large", "small", "normal"], defaultValue: "normal", description: "Resize the button" },
-        disabled: { name: "Disabled", control: 'boolean', defaultValue: false },
-        htmlType: { name: "Type", control: 'select', options: ['button', 'submit'] },
+        rounded: { control: 'boolean', defaultValue: false, name: "Rounded", description: "Makes the Badge rounded" },
+        color: {control: 'color', description:"Custom color for Badge"},
+        onRemove: {action: 'onRemove'},
+        className: { control: 'text' },
         onClick: { action: 'clicked' },
         style: { control: 'object', name: "Style" },
-        loader: { control: 'boolean', defaultValue: false },
     },
-    parameters: { controls: { exclude: ['type'] } }
+    parameters: { controls: { exclude: ['type'] } },
 } as ComponentMeta<ButtonType>;
 
 
-const Template: ComponentStory<ButtonType> = (args) => <Button {...args} />;
+const Template: ComponentStory<ButtonType> = (args) => <Badge {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

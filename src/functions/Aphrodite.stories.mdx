@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs';
+import { FUNCTION_PREFIX } from '../helper/constant';
+import { linkTo } from '@storybook/addon-links';
+
+<Meta title={`${FUNCTION_PREFIX}/Aphrodite(CSS in JS)`} />
+
+# Aphrodite Helping Function
+
+An extended configured API of [Aphrodite](https://github.com/Khan/aphrodite). The API is further enhanced to allow the support for nested CSS selectors to help out with common CSS inheritance pattern selectors. 
+
+## Create compilable StyleSheet of Style Object
+### Syntax: StyleSheet.create(StyleObject)
+
+#### Parameters
+- StyleObject: (type: {[key in string]: React.CSSProperties}) An object containing keyed style objects 
+
+#### Return Value
+- An Object containing key of same name with value to reference to style class
+
+#### Usage:
+
+```
+// Creating a style object to give container class consumer a background color of red
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: 'red',
+    }
+}); 
+
+// Applying style to HTMLDivElement by using 'css' function (see below)
+<div className={css(styles.container)}></div>
+
+```
+
+---
+
+## Server Side rendering with StyleSheetServer
+### Syntax: StyleSheetServer
+
+#### Usage:
+
+See [Official](https://github.com/Khan/aphrodite#server-side-rendering) usage Docs
+
+---
+
+## Compile StyleSheet and map styles
+### Syntax: css(StyleObjectKey)
+
+#### Parameters
+- StyleObjectKey: (type: keyof StyleObject) StyleObject key  
+
+#### Usage:
+
+See [Official](https://github.com/Khan/aphrodite#server-side-rendering) usage Docs
+
+All rights are reserved to [Khan Academy](https://github.com/Khan) for providing this library
