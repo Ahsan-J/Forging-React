@@ -12,7 +12,13 @@ interface propTypes {
     accept?: Array<string>;
     type?: ColorSchemes;
     iconName?: IconNames;
+    showList?: boolean;
+    outline?: boolean;
+    block?: boolean;
+    disabled?: boolean;
+    loader?: boolean;
+    size?: "normal" | "small" | "large";
     onChange?: (files: Array<File>) => void;
 }
-declare const Uploader: React.NamedExoticComponent<React.PropsWithChildren<propTypes>>;
+declare const Uploader: React.NamedExoticComponent<propTypes>;
 export default Uploader;

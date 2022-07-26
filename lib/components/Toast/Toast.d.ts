@@ -5,13 +5,24 @@ declare type propTypes = {
     className?: string;
     style?: React.CSSProperties;
     onDismiss?: () => void;
-    title: string;
-    show: boolean;
+    title?: React.ReactNode | string;
+    show?: boolean;
     type?: ColorSchemes;
-    animationDirection?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
+    direction?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
     autoDismissTimeout?: number;
+    progress?: boolean;
 };
+declare type showToastParameter = {
+    show?: propTypes['show'];
+    title: propTypes['title'];
+    body: React.ReactNode | string;
+    autoDismissTimeout?: propTypes['autoDismissTimeout'];
+    type?: propTypes['type'];
+};
+export interface IToastRef {
+    showToast: (param: showToastParameter) => void;
+}
 declare const Toast: React.ForwardRefExoticComponent<propTypes & {
     children?: React.ReactNode;
-} & React.RefAttributes<HTMLDivElement>>;
+} & React.RefAttributes<IToastRef>>;
 export default Toast;

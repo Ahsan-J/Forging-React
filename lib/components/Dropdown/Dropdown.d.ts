@@ -26,6 +26,7 @@ declare type propTypes = {
     outline?: boolean;
     disabled?: boolean;
     value?: string;
+    block?: boolean;
 };
 declare const Dropdown: React.ForwardRefExoticComponent<propTypes & React.RefAttributes<IDropdownInstance>>;
 export default Dropdown;
