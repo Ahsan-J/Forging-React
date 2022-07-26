@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Tab } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ButtonType = typeof Tab;
+type ComponentType = typeof Tab;
 
 const data = {
     "Tab 1": <>Tab Content 1</>,
@@ -19,18 +19,15 @@ export default {
         data
     },
     argTypes: {
-        className: { control: 'text', name: 'Class', description: "Container Class for Tab" },
-        id: { control: 'text' },
-        // spinDuration: { control: 'number', name: "Spin Duration", description: "Duration to complete a single cycle", defaultValue: 800 },
-        // size: { control: 'radio', name: "Size", options: ["large", "small", "normal"], defaultValue: "normal", description: "Resize the button" },
-        style: { control: 'object', name: "Style" },
-        // loader: { control: 'boolean', defaultValue: false },
+        id: { control: 'text', description: "A unique identifier" },
+        className: { control: 'text', description: "Container Class" },
+        style: { control: 'object', description: "CSS Style Object" },
     },
-} as ComponentMeta<ButtonType>;
+} as ComponentMeta<ComponentType>;
 
-export const Simple: ComponentStory<ButtonType> = (args) => <Tab {...args} />;
+export const Simple: ComponentStory<ComponentType> = (args) => <Tab {...args} />;
 
-export const Dynamic : ComponentStory<ButtonType> = (args) => {
+export const Dynamic : ComponentStory<ComponentType> = (args) => {
     const [data, setData] = useState(args.data);
     
     const onAddTab = (newKey: string) => {
@@ -51,6 +48,6 @@ export const Dynamic : ComponentStory<ButtonType> = (args) => {
 };
 
 Dynamic.argTypes = {
-    onAddTab: {action: 'onAddTab'},
-    onTabClose: {action: 'onTabClose'},
+    onAddTab: {action: 'onAddTab', description: "Event triggered when adding a new tab"},
+    onTabClose: {action: 'onTabClose', description: "Event triggered when closing an existing tab"},
 };

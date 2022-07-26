@@ -13,13 +13,13 @@ export default {
         progress: 75,
     },
     argTypes: {
-        total: { control: "number", name: "Total", description: "Total value in number to calculate percentage against" },
-        progress: { control: "number", name: "Progress", description: "The Elapsed value to calculate percentage with" },
-        id: { control: 'text' },
-        striped: { control: "boolean", name: "Stripped", description: "Strip pattern on progress" },
-        animated: { control: "boolean", name: "Animated", description: "Animating the Progress" },
-        className: { control: 'text', name: 'Class', description: "Container Class for Progress" },
-        style: { control: 'object', name: "Style" },
+        total: { control: "number", description: "Total value in number to calculate percentage against" },
+        progress: { control: "number", description: "The Elapsed value to calculate percentage with" },
+        id: { control: 'text', description: "A unique identifier" },
+        striped: { control: "boolean", description: "Strip pattern on progress" },
+        animated: { control: "boolean", description: "Animating the Progress" },
+        className: { control: 'text', description: "Container Class" },
+        style: { control: 'object', description: "CSS Style Object" },
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;

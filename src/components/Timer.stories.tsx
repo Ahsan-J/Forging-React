@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Timer } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ButtonType = typeof Timer
+type ComponentType = typeof Timer
 
 export default {
     title: `${COMPONENT_PREFIX}/Timer`,
@@ -12,13 +12,15 @@ export default {
         total: 60,
     },
     argTypes: {
-        className: { control: 'text', name: 'Class', description: "Container Class for Timer" },
-        total: { control: 'number', name: "Total Duration", description: "Total time duration in seconds that timer will run", defaultValue: 800 },
-        style: { control: 'object', name: "Style" },
-        duration: {control: 'number', name: "Current Duration", description: "Current Duration. Useful for controlled timer"},
-        play: { control: 'boolean', defaultValue: true },
+        formatDuration: { description: "A custom formatter for timer" },
+        id: { control: 'text', description: "A unique identifier" },
+        className: { control: 'text', description: "Container Class" },
+        style: { control: 'object', description: "CSS Style Object" },
+        total: { control: 'number', description: "Total time duration in seconds that timer will run", defaultValue: 800 },
+        duration: { control: 'number', description: "Current Duration. Useful for controlled timer" },
+        play: { control: 'boolean', defaultValue: true, description: "Play or Pause the timer" },
     },
     parameters: { controls: { exclude: ['type'] } }
-} as ComponentMeta<ButtonType>;
+} as ComponentMeta<ComponentType>;
 
-export const Sample: ComponentStory<ButtonType> = (args) => <Timer {...args} />;
+export const Sample: ComponentStory<ComponentType> = (args) => <Timer {...args} />;

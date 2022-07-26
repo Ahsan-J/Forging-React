@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Spinner } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ButtonType = typeof Spinner
+type ComponentType = typeof Spinner
 
 export default {
     title: `${COMPONENT_PREFIX}/Spinner`,
@@ -12,18 +12,18 @@ export default {
         loader: true,
     },
     argTypes: {
-        className: { control: 'text', name: 'Class', description: "Container Class for Spinner" },
-        id: { control: 'text' },
-        spinDuration: { control: 'number', name: "Spin Duration", description: "Duration to complete a single cycle", defaultValue: 800 },
-        size: { control: 'radio', name: "Size", options: ["large", "small", "normal"], defaultValue: "normal", description: "Resize the button" },
-        style: { control: 'object', name: "Style" },
-        loader: { control: 'boolean', defaultValue: false },
+        className: { control: 'text', description: "Container Class" },
+        id: { control: 'text', description: "A unique identifier" },
+        spinDuration: { control: 'number', description: "Duration to complete a single cycle", defaultValue: 800 },
+        size: { control: 'radio', options: ["large", "small", "normal"], defaultValue: "normal", description: "Resize the button" },
+        style: { control: 'object', description: "CSS Style Object" },
+        loader: { control: 'boolean', defaultValue: false, description: "Show or hide element" },
     },
     parameters: { controls: { exclude: ['type'] } }
-} as ComponentMeta<ButtonType>;
+} as ComponentMeta<ComponentType>;
 
 
-const Template: ComponentStory<ButtonType> = (args) => <Spinner {...args} />;
+const Template: ComponentStory<ComponentType> = (args) => <Spinner {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

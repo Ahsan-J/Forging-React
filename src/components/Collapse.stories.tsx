@@ -3,20 +3,21 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Collapse } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ButtonType = typeof Collapse
+type ComponentType = typeof Collapse
 
 export default {
     title: `${COMPONENT_PREFIX}/Collapse`,
     component: Collapse,
     argTypes: {
-        title: {control: "text", },
-        collapse: { control: 'boolean', defaultValue: true, name: "Collapse" },    
-        style: { control: 'object', name: "Style" },
+        className: {control: 'text', description: "Container Class"},
+        title: {control: "text", description: "Element or String for the Collapse trigger button"},
+        collapse: { control: 'boolean', defaultValue: true, description: "Collapsing controlling state" },    
+        style: { control: 'object', description: "CSS Style Object" },
     },
     parameters: { controls: { exclude: ['children'] } },
-} as ComponentMeta<ButtonType>;
+} as ComponentMeta<ComponentType>;
 
-export const Sample: ComponentStory<ButtonType> = (args) => <Collapse {...args} />
+export const Sample: ComponentStory<ComponentType> = (args) => <Collapse {...args} />
 Sample.args = {
     title: "Click to see Luffy",
     children: (

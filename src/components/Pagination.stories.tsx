@@ -13,13 +13,13 @@ export default {
     },
     argTypes: {
         showNumberLength: {control: 'number'},
-        onItemClick: {action: 'onItemClick'},
-        onNextClick: {action: 'onNextClick'},
-        onPreviousClick: {action: "onPreviousClick"},
-        total: {control: 'number', name: "Total Pages"},
-        currentPage: {control: 'number', name: "Current Page"},
-        className: {control: 'text', name: 'Class', description: "Container Class"},
-        style: { control: 'object', name: "Style" },  
+        onItemClick: {action: 'onItemClick',description: "Event Triggered when clicking an index number"},
+        onNextClick: {action: 'onNextClick', description: "Event Triggered when clicking next icon"},
+        onPreviousClick: {action: "onPreviousClick", description: "Event Triggered when clicking previous icon"},
+        total: {control: 'number', description: "Total number Pages"},
+        currentPage: {control: 'number', description: "Current Page number"},
+        className: { control: 'text', description: "Container Class" },
+        style: { control: 'object', description: "CSS Style Object" },
     },
 } as ComponentMeta<ComponentType>;
 

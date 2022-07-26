@@ -13,12 +13,12 @@ export default {
         searchText: "jumps"
     },
     argTypes: {
-        id: { control: 'text' },
-        color: {control: "color", name:"Highlighting Color", description: "Colors the matching subtring"},
-        searchText: {control: "string", name:"Searching Text", description: "Searching substring text" },
-        text: {control: "string", name:"Original Text", description: "Original full text" },
-        className: {control: 'text', name: 'Conainer Class', description: "Class for container"},
-        style: { control: 'object', name: "Style" },  
+        id: { control: 'text', description: "A unique identifier" },
+        color: {control: "color", description: "Highlighting colors the matching subtring"},
+        searchText: {control: "string", description: "Searching substring text" },
+        text: {control: "string",  description: "Original full text" },
+        className: {control: 'text',  description: "Container Class"},
+        style: { control: 'object', description: "CSS Style Object" },    
     },
 } as ComponentMeta<ComponentType>;
 

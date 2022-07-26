@@ -12,12 +12,12 @@ export default {
         
     },
     argTypes: {
-        id: { control: 'text' },
-        theme: {control: "select", options: ['dark', 'light'], name:"Theme", description: "Dark/Light Theme"},
-        fixed: {control: "select", options: ['bottom', 'top'], name: "Fixed", description: "If provided, fix the Navbar relative to parent container"},
-        size: {control: "select", options: ['large', 'medium', 'small', 'x-large', 'xx-large'], name: "Size", description: "Size of Navbar"},
-        className: {control: 'text', name: 'Class', description: "Container Class Navbar"},
-        style: { control: 'object', name: "Style" },  
+        id: { control: 'text', description: "A unique identifier" },
+        theme: {control: "select", options: ['dark', 'light'], description: "Dark/Light Theme"},
+        fixed: {control: "select", options: ['bottom', 'top'], description: "If provided, fix the Navbar relative to parent container"},
+        size: {control: "select", options: ['large', 'medium', 'small', 'x-large', 'xx-large'], description: "Size of Navbar", defaultValue: "medium"},
+        className: { control: 'text', description: "Container Class" },
+        style: { control: 'object', description: "CSS Style Object" }, 
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;

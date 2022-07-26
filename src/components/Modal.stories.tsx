@@ -12,14 +12,15 @@ export default {
         children: "Sample Modal Body",
     },
     argTypes: {
-        animationDirection: { control: 'select', name: "Animation Direction", options: ["top", "bottom", "left", "right"]},
-        id: { control: 'text' },
-        onBackdrop: { action: 'onBackdrop'},
-        onDismiss: {action: 'onDismiss'},
-        showChildren: { control: 'boolean', defaultValue: false, name: "Show Children" },
-        show: { control: 'boolean', defaultValue: true, name: "Show" },
-        wrapper: {control: 'string', name: "Wrapping Element", defaultValue: 'div'},
-        style: { control: 'object', name: "Style" },
+        className: { control: 'text', description: "Container Class" },
+        animationDirection: { control: 'select', description: "Animation Direction", options: ["top", "bottom", "left", "right"]},
+        id: { control: 'text', description: "A unique identifier" },
+        onBackdrop: { action: 'onBackdrop', description: "Event Triggered when clicked on Backdrop"},
+        onDismiss: {action: 'onDismiss', description: "Event Triggered when dismiss button is cliked"},
+        showChildren: { control: 'boolean', defaultValue: false },
+        show: { control: 'boolean', defaultValue: true, description: "Controlling state to handle modal show" },
+        wrapper: {control: 'string', description: "Wrapping Element", defaultValue: 'div'},
+        style: { control: 'object', description: "CSS Style Object" },
     },
 } as ComponentMeta<ComponentType>;
 

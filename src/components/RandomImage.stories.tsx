@@ -9,12 +9,12 @@ export default {
     title: `${COMPONENT_PREFIX}/RandomImage`,
     component: RandomImage,
     args: {
-        rectangleSize: 20,
+        size: 20,
     },
     argTypes: {
-        rectangleSize: { control: "number", name: "Total", description: "Total value in number to calculate percentage against" },
-        className: { control: 'text', name: 'Class', description: "Container Class for Progress" },
-        style: { control: 'object', name: "Style" },
+        size: { control: "number", description: "Total number of random boxes" },
+        className: { control: 'text', description: "Container Class" },
+        style: { control: 'object', description: "CSS Style Object" },
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;

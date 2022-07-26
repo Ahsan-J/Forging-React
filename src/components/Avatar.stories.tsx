@@ -12,8 +12,11 @@ export default {
         style: {height: "5rem", width: '5rem', fontSize: "2rem"},
     },
     argTypes: {
-        id: { control: 'text' },
-        style: { control: 'object', name: "Style" },
+        id: { control: 'text',description: "A unique identifier" },
+        style: { control: 'object', description: "CSS Style Object" },
+        className: {control: 'text', description: "Container Class"},
+        name: {control: 'text', description: "Generate Avatar by User's name"},
+        src: {control: 'text', description: "A source URL to display HTML Image"},
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;
