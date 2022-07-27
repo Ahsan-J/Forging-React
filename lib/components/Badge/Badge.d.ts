@@ -5,7 +5,6 @@ declare type propTypes = {
     className?: string;
     style?: React.CSSProperties;
     type?: ColorSchemes;
-    color?: ColorSchemes;
     rounded?: boolean;
     onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };

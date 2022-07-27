@@ -19,6 +19,7 @@ interface propTypes {
     loader?: boolean;
     size?: "normal" | "small" | "large";
     onChange?: (files: Array<File>) => void;
+    error?: string;
 }
 declare const Uploader: React.NamedExoticComponent<propTypes>;
 export default Uploader;

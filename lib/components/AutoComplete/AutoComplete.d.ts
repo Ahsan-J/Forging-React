@@ -5,7 +5,6 @@ declare type propTypes = {
     className?: string;
     label?: string;
     labelClass?: string;
-    htmlType?: string;
     options?: {
         [key: string]: IDropdownItem;
     };
@@ -21,6 +20,7 @@ declare type propTypes = {
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
     onItemClick?: (key: string, value: IDropdownItem) => void;
     renderDropdownItem?: (value: IDropdownItem, key: string) => React.ReactElement;
+    error?: string;
 };
 declare const AutoComplete: React.NamedExoticComponent<propTypes>;
 export default AutoComplete;
