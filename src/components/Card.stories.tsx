@@ -1,26 +1,26 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Badge } from '../../lib/components';
+import { Card } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
-type ComponentType = typeof Badge
+type ComponentType = typeof Card
 
 export default {
-    title: `${COMPONENT_PREFIX}/Badge`,
-    component: Badge,
-    argTypes: {
-        id: { control: 'text', description: "A unique identifier" },
-        rounded: { control: 'boolean', defaultValue: false, description: "Makes the Badge rounded" },
-        onRemove: {action: 'onRemove', description: "Event triggered when removing a Badge"},
+    title: `${COMPONENT_PREFIX}/Card`,
+    component: Card,
+    argTypes: { 
+        title: { control: 'text', description: "Card Title. Displayed inside card body" },
+        subtitle: { control: 'text', description: "Card SubTitle. Displayed inside card body. After title" },
         className: {control: 'text', description: "Container Class"},
-        onClick: { action: 'clicked', description: "Event triggered when clicking a Badge" },
         style: { control: 'object', description: "CSS Style Object" },
+        footer: {description: "A ReactNode type element displayed at the Bottom of Card "},
+        header: {description: "A ReactNode type element displayed at the Top of Card "},
     },
     parameters: { controls: { exclude: ['type'] } },
 } as ComponentMeta<ComponentType>;
 
 
-const Template: ComponentStory<ComponentType> = (args) => <Badge {...args} />;
+const Template: ComponentStory<ComponentType> = (args) => <Card {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

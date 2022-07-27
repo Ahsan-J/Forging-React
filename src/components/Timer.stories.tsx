@@ -12,6 +12,7 @@ export default {
         total: 60,
     },
     argTypes: {
+        renderTimer: { description: "A custom renderer to override default timer UI" },
         formatDuration: { description: "A custom formatter for timer" },
         id: { control: 'text', description: "A unique identifier" },
         className: { control: 'text', description: "Container Class" },

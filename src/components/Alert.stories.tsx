@@ -11,13 +11,17 @@ export default {
     args: {
         title: "Alert",
         show: true,
-        onDismiss: () => console.log("Here dismissed"),
     },
     argTypes: {
-        title: { control: 'text' },
-        autoDismissTimeout: { control: ''},
-        onShow: { action: 'clicked' },
-        onDismiss: { action: 'dismissed' }
+        renderIcon: {description: "Render custom icon for Alert"},
+        className: { control: 'text', description: "Container Class" },
+        id: { control: 'text', description: "A unique identifier" },
+        style: { control: 'object', description: "CSS Style Object" },
+        show: { control: 'boolean', defaultValue: true, description: "Controlling show or hiding. Overrides default behavior" },
+        title: { control: 'text', description: "Alert title"},
+        autoDismissTimeout: { control: 'number', description: "Timeout for auto dismissal"},
+        onShow: { action: 'onShow', description: "Event triggered when propting to show Alert" },
+        onDismiss: { action: 'onDismissed' }
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;

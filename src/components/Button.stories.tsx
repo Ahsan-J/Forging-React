@@ -17,7 +17,7 @@ export default {
         block: { control: 'boolean', defaultValue: true, description: "Make Button full width" },
         size: { control: 'select', options: ["large", "small", "normal"], defaultValue: "normal", description: "Resize the button" },
         disabled: { control: 'boolean', defaultValue: false, description: "Make Button disable to function" },
-        htmlType: {control: 'select', options: ['button', 'submit'], description: "Form HTML Button type" },
+        htmlType: { control: 'select', options: ['button', 'submit'], description: "Form HTML Button type" },
         onClick: { action: 'clicked', description: "Click action" },
         style: { control: 'object', description: "CSS Style Object" },
         loader: { control: 'boolean', defaultValue: false, description: "Replace a Spinner Element with Icon" },

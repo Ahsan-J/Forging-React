@@ -19,6 +19,9 @@ export default {
         placeholder: "Auto Complete"
     },
     argTypes: {
+        renderDropdownItem: {description: "A function that can override the default rendering of dropdown option items"},
+        options: {control: 'object', description: "A key value options to display in dropdown"},
+        error: {control: "text", description: "Value to show error if present"},
         className: {control: 'text', description: "Container Class"},
         id: { control: 'text', description: "A unique identifier" },
         highlightColor: {control: "color", description: "Highlighting Color the option that matches the text input"},

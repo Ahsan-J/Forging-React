@@ -20,7 +20,8 @@ export default {
         placeholder: "Select Genre"
     },
     argTypes: {
-        options: {control: 'object', description: "A key value options to display"},
+        error: {control: "text", description: "Value to show error if present"},
+        options: {control: 'object', description: "A key value options to display in dropdown"},
         renderSelectedValue: {description: "Function that returns custom Item for selected value"},
         renderItem: {description: "Function that returns custom Item for dropdown list"},
         value: {control: "select", description: "Controlled dropdown", options: Object.keys(options)},
