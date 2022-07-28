@@ -16,6 +16,7 @@ export default {
     component: AutoComplete,
     args: {
         options,
+        values: ["5", "7"],
         placeholder: "Auto Complete"
     },
     argTypes: {
@@ -35,7 +36,8 @@ export default {
         name: {control: 'text', description: "Form input name. Useful when submitting Forms"},
         labelClass: {control: 'text', description: "Class for Label"},
         badgeClass: {control: 'text', description: "Class for Badge"},
-        style: { control: 'object', description: "CSS Style Object" },  
+        style: { control: 'object', description: "CSS Style Object" },
+        values: {control: 'object', description: "Array of string provided for controlled input behavior"},
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;
