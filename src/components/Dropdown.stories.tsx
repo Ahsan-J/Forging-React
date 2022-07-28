@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Dropdown, IDropdownItem } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 import genre from '../data/genre.json';
-import iconsets from '../../lib/components/Icon/iconsets.js';
+import iconsets from '../../lib/components/Icon/iconSets';
 
 type ComponentType = typeof Dropdown;
 

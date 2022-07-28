@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Button } from '../../lib/components';
-import iconsets from '../../lib/components/Icon/iconsets.js';
+import iconsets from '../../lib/components/Icon/iconSets';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
 type ComponentType = typeof Button
