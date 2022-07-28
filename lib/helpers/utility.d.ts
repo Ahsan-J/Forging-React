@@ -1,4 +1,4 @@
-export declare const chunkArray: (arr?: Array<any>, size?: number) => any[][];
+export declare const chunkArray: <T = any>(arr?: T[], size?: number) => T[][];
 export declare const range: (startIndex?: number, lastIndex?: number, step?: number) => Array<number>;
 export declare const triggerFormError: (form: HTMLFormElement | null, fields: {
     [x: string]: string;

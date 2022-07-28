@@ -7,7 +7,7 @@ declare type propTypes = {
     onClose?: () => void;
     show?: boolean;
     width?: string;
-    title?: JSX.Element | string | null;
+    title?: React.ReactNode;
 };
 export interface IDrawerRef {
     open: () => void;

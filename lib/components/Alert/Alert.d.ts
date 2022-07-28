@@ -9,7 +9,7 @@ declare type propTypes = {
     onDismiss?: () => void;
     title: string;
     show?: boolean;
-    renderIcon?: (iconName?: IconNames) => JSX.Element | string | null;
+    renderIcon?: (iconName?: IconNames) => React.ReactNode;
     autoDismissTimeout?: number;
 };
 declare const Alert: React.ForwardRefExoticComponent<propTypes & {

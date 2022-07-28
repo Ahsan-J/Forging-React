@@ -5,7 +5,9 @@ export interface ICollapseRef {
 interface propTypes {
     className?: string;
     style?: React.CSSProperties;
-    title?: string | (() => JSX.Element | null) | JSX.Element | null;
+    title?: (({ collapse }: {
+        collapse: boolean;
+    }) => JSX.Element | null) | React.ReactNode;
     collapse?: boolean;
 }
 declare const Collapse: React.ForwardRefExoticComponent<propTypes & {

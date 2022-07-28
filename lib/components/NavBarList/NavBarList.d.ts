@@ -9,7 +9,7 @@ declare type propTypes = {
     className?: string;
     data: Array<INavItem>;
     type?: "NavBar" | "Tab";
-    renderListItem?: (item: INavItem, index?: number) => (JSX.Element | null);
+    renderListItem?: (item: INavItem, index?: number) => React.ReactNode;
     onItemClose?: (item: INavItem) => void;
     onAddItem?: () => void;
     active?: INavItem['title'];

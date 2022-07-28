@@ -2,7 +2,7 @@ import React from 'react';
 interface propTypes {
     className?: string;
     style?: React.CSSProperties;
-    renderTimer?: (duration: number) => JSX.Element | string | null;
+    renderTimer?: (duration: number) => React.ReactNode;
     total?: number;
     play?: boolean;
     duration?: number;
