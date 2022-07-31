@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Uploader } from '../../lib/components';
-import iconsets from '../../lib/components/Icon/iconSets';
+import { Uploader, IconSets } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
 type ComponentType = typeof Uploader
@@ -19,7 +18,7 @@ export default {
         loader: { control: 'boolean', defaultValue: false, description: "Replace a Spinner Element with Icon" },
         id: { control: 'text', description: "A unique identifier" },
         className: { control: 'text', description: "Container Class" },
-        iconName: { control: "select", options: Object.keys(iconsets), description: "Set of icons supported" },
+        iconName: { control: "select", options: IconSets, description: "Set of icons supported" },
         onChange: { action: 'onChange', description: "Event triggered when files are changed" },
         multiple: { control: 'boolean', defaultValue: false, description: "Allow Selecting multiple files" },
         name: { control: 'text', description: "Form input name. Useful when submitting Forms" },

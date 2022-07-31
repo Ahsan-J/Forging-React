@@ -1,9 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Dropdown, IDropdownItem } from '../../lib/components';
+import { Dropdown, IDropdownItem, IconSets } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 import genre from '../data/genre.json';
-import iconsets from '../../lib/components/Icon/iconSets';
 
 type ComponentType = typeof Dropdown;
 
@@ -26,7 +25,7 @@ export default {
         renderItem: {description: "Function that returns custom Item for dropdown list"},
         value: {control: "select", description: "Controlled dropdown", options: Object.keys(options)},
         defaultKey: { control: 'select', description: "Default value selected on mount", options: Object.keys(options)},
-        iconName: { control: "select", options: Object.keys(iconsets), description: "Set of icons supported" },
+        iconName: { control: "select", options: IconSets, description: "Set of icons supported" },
         label: {control: "string", description: "Label the input field. Useful for forms" },
         placeholder: {control: "string", description: "Placeholer an empty value"},
         onItemClick: {action: 'onItemClicked', description: "Event triggered when clicking an item"},

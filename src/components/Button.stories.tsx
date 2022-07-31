@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Button } from '../../lib/components';
-import iconsets from '../../lib/components/Icon/iconSets';
+import { Button, IconSets } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
 
 type ComponentType = typeof Button
@@ -12,7 +11,7 @@ export default {
     argTypes: {
         id: { control: 'text', description: "A unique identifier" },
         className: { control: 'text', description: "Container Class" },
-        iconName: { control: "select", options: Object.keys(iconsets), description: "Set of icons supported" },
+        iconName: { control: "select", options: IconSets, description: "Set of icons supported" },
         outline: { control: 'boolean', defaultValue: false, description: "Make button outline" },
         block: { control: 'boolean', defaultValue: true, description: "Make Button full width" },
         size: { control: 'select', options: ["large", "small", "normal"], defaultValue: "normal", description: "Resize the button" },

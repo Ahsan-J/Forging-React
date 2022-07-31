@@ -1,8 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Avatar, Icon } from '../../lib/components';
+import { Avatar, Icon, IconSets } from '../../lib/components';
 import { COMPONENT_PREFIX } from '../helper/constant';
-import iconsets from '../../lib/components/Icon/iconSets';
 
 type ComponentType = typeof Avatar;
 
@@ -44,7 +43,7 @@ WithIcon.args= {
     iconName: "people",
 }
 WithIcon.argTypes = {
-    iconName: { control: "select", options: Object.keys(iconsets), description: "Set of icons supported" },
+    iconName: { control: "select", options: IconSets, description: "Set of icons supported" },
 };
 
 export const WithChildren = Template.bind({});

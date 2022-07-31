@@ -22,6 +22,7 @@ declare type propTypes = {
     renderDropdownItem?: (value: IDropdownItem, key: string) => React.ReactElement;
     error?: string;
     values?: Array<string>;
+    disabled?: boolean;
 };
 declare const AutoComplete: React.NamedExoticComponent<propTypes>;
 export default AutoComplete;
