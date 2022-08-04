@@ -20,5 +20,5 @@ declare type propTypes = {
     type?: ColorSchemes;
     iconOnActive?: boolean;
 };
-declare const BreadCrumb: React.NamedExoticComponent<propTypes>;
-export default BreadCrumb;
+declare const Breadcrumb: React.NamedExoticComponent<propTypes>;
+export default Breadcrumb;
