@@ -19,7 +19,7 @@ export default {
         show: { control: 'boolean', defaultValue: true, description: "Controlling show or hiding. Overrides default behavior" },
         style: { control: 'object', description: "CSS Style Object" },
         title: { control: 'text', description: "Toast Title" },
-        direction: {control: "", options: ["top-right", "top-left", "bottom-right", "bottom-left"], description: "Direction to open the Toast", defaultValue: "top-right"},
+        direction: {control: "", options: ["top-right", "top-left", "bottom-right", "bottom-left", "top-middle", "bottom-middle"], description: "Direction to open the Toast", defaultValue: "top-right"},
         progress: { control: 'boolean', defaultValue: true, description: "Show Progress with Toast" },
     },
     parameters: { controls: { exclude: ['type'] } }

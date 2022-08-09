@@ -8,14 +8,14 @@ declare type propTypes = {
     title?: React.ReactNode | string;
     show?: boolean;
     type?: ColorSchemes;
-    direction?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
+    direction?: "top-right" | "top-left" | "bottom-right" | "bottom-left" | "top-middle" | "bottom-middle";
     autoDismissTimeout?: number;
     progress?: boolean;
 };
 declare type showToastParameter = {
     show?: propTypes['show'];
     title: propTypes['title'];
-    body: React.ReactNode | string;
+    body?: React.ReactNode | string;
     autoDismissTimeout?: propTypes['autoDismissTimeout'];
     type?: propTypes['type'];
 };
