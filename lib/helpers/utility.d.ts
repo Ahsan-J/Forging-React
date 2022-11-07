@@ -7,6 +7,7 @@ export declare const cleanObject: (obj?: any) => any;
 export declare const mergeArrayByKey: (des?: Array<any>, src?: Array<any>, key?: string) => any[];
 export declare const groupBy: <T = any>(xs: T[], key: keyof T | ((item: T) => string)) => any;
 export declare const unmarshalFormData: (formData: FormData) => any;
+export declare const getNumberFromMeasuredUnit: (measurement: string) => number;
 export declare const isBrowser: () => boolean;
 export declare const toKebabCase: (s: string) => string | undefined;
 export declare const toSnakeCase: (s: string) => string | undefined;

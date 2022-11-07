@@ -1,6 +1,6 @@
 {
   "name": "forgingreact",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The Basic elements of React written using Bootstrap",
   "main": "lib/components/index.js",
   "homepage": "http://ahsan-j.github.io/forging-react",

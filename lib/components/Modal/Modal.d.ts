@@ -10,7 +10,7 @@ declare type propTypes = {
     animationDirection?: "right" | "left" | "top" | "bottom";
     showChildren?: boolean;
     wrapper?: keyof HTMLElementTagNameMap;
-    onBackdrop?: (event?: Event, ref?: React.Ref<IModalRef>) => void;
+    onBackdrop?: (event?: Event, ref?: React.Ref<IModalRef>) => boolean | void;
     show?: boolean;
 };
 declare const Modal: React.ForwardRefExoticComponent<propTypes & {
