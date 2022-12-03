@@ -32,10 +32,12 @@ WithName.argTypes = {
 
 export const WithImage = Template.bind({});
 WithImage.args = {
-    src: require('../data/Luffy.jpg')
+    src: require('../data/Luffy.jpg'),
+    canPreview: false,
 };
 WithImage.argTypes = {
     src: {control: 'text', description: "A source URL to display HTML Image"},
+    canPreview: { control: 'boolean', defaultValue: false, description: "Allow user to preview image when clicked" },
 };
 
 export const WithIcon = Template.bind({});
