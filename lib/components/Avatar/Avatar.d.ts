@@ -6,6 +6,8 @@ declare type propTypes = {
     style?: React.CSSProperties;
     name?: string;
     src?: string;
+    size?: string | number;
+    loading?: HTMLImageElement['loading'];
     onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     iconName?: IconNames;
     canPreview?: boolean;

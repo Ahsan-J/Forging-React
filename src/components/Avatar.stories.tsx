@@ -15,6 +15,7 @@ export default {
         id: { control: 'text',description: "A unique identifier" },
         style: { control: 'object', description: "CSS Style Object" },
         className: {control: 'text', description: "Container Class"},
+        size: {control: 'text', description: "A uniform size supplied to help pre-render Image"}
     },
     parameters: { controls: { exclude: ['type'] } }
 } as ComponentMeta<ComponentType>;
