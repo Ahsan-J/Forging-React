@@ -1,3 +1,4 @@
+import { IModalRef } from '..';
 import React from 'react';
 declare type propTypes = {
     className?: string;
@@ -10,6 +11,7 @@ declare type propTypes = {
     useFetch?: boolean;
     description?: React.ReactNode | string | null;
     header?: Array<HeadersInit> | HeadersInit | undefined;
+    onBackdrop?: ((event?: Event, ref?: React.Ref<IModalRef>) => boolean | void);
 };
 export interface IImageViewer {
     showModal: (state: boolean, imgSrcSet?: propTypes['images']) => void;
