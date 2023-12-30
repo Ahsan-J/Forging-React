@@ -1,0 +1,21 @@
+import React from "react";
+import Icon from "../Icon";
+import { ColorSchemes, Size } from "../../types/theme";
+type IconProps = React.ComponentProps<typeof Icon>;
+type propTypes = {
+    id?: string;
+    onRemove?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
+    className?: string;
+    style?: React.CSSProperties;
+    rounded?: boolean;
+    type?: ColorSchemes;
+    loader?: boolean;
+    onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+    children: string | React.PropsWithChildren['children'];
+    viewBox?: IconProps['viewBox'];
+    iconName?: IconProps['name'];
+    fill?: IconProps['fill'];
+    size?: Size;
+};
+declare const Badge: React.NamedExoticComponent<propTypes>;
+export default Badge;
