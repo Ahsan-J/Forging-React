@@ -1,13 +1,12 @@
 import { ColorSchemes, Size } from "../../types/theme";
 type propType = {
-    type?: ColorSchemes;
     size?: Size;
+    type?: ColorSchemes;
+    bgAlpha?: number;
 };
 export declare const useStyles: (props?: propType) => {
-    timeline: object;
-    container: object;
-    left: object;
-    right: object;
-    content: object;
+    switch: object;
+    checked: object;
+    offscreen: object;
 };
 export {};

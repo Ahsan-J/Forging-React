@@ -1,6 +1,5 @@
 import React from 'react';
-import { ColorSchemes } from '../../types/theme';
-import { Size } from '../../types/theme';
+import { ColorSchemes, Size } from '../../types/theme';
 type propTypes<T = unknown> = {
     className?: string;
     style?: React.CSSProperties;

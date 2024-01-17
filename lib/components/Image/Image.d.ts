@@ -12,7 +12,6 @@ type propTypes = {
     id?: string;
     loader?: boolean;
     onLoad?: React.ReactEventHandler<HTMLImageElement>;
-    onClick?: React.MouseEventHandler<HTMLImageElement>;
     title?: React.ImgHTMLAttributes<HTMLImageElement>['title'];
 };
 declare const Image: React.NamedExoticComponent<propTypes>;

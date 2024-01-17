@@ -15,6 +15,7 @@ type propTypes = {
     onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     iconName?: IconNames;
     canPreview?: boolean;
+    loader?: boolean;
 };
 declare const Avatar: React.MemoExoticComponent<(props: PropsWithChildren<propTypes>) => import("react/jsx-runtime").JSX.Element>;
 export default Avatar;

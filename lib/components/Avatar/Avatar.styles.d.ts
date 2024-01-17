@@ -9,5 +9,6 @@ export declare const useStyles: (props?: propType) => {
     container: object;
     image: object;
     iconContainer: object;
+    button: object;
 };
 export {};
