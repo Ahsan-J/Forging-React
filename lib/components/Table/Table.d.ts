@@ -37,6 +37,7 @@ type propTypes<T = unknown> = {
     showNumberLength?: number;
     type?: ColorSchemes;
     size?: Size;
+    bgAlpha?: number;
 };
 declare function Table<T = unknown>(props: propTypes<T>): import("react/jsx-runtime").JSX.Element | null;
 declare namespace Table {

@@ -16,6 +16,7 @@ type propTypes = {
     iconName?: IconProps['name'];
     fill?: IconProps['fill'];
     size?: Size;
+    bgAlpha?: number;
 };
 declare const Badge: React.NamedExoticComponent<propTypes>;
 export default Badge;

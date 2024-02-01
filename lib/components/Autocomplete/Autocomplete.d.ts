@@ -31,6 +31,7 @@ type propType<T = unknown> = {
     renderSelectedBadges?: boolean | ((selectedKeys: Array<keyof T>, onRemoveBadge: (key: keyof T) => void) => React.ReactNode);
     loader?: boolean;
     searchable?: boolean;
+    bgAlpha?: number;
 };
 declare const _default: <T extends ObjectType<IDropdownItem>>(props: propType<T> & React.RefAttributes<HTMLInputElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
 export default _default;

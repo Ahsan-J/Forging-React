@@ -20,6 +20,7 @@ type propType = {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     onKeyDown?: React.KeyboardEventHandler<HTMLButtonElement>;
     value?: string | number | boolean;
+    bgAlpha?: number;
 };
 export interface IButtonRef {
     setLoader: (loader: boolean) => void;

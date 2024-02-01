@@ -4,6 +4,7 @@ type propType = {
     size?: Size;
     name?: string;
     iconName?: IconNames;
+    bgAlpha?: number;
 };
 export declare const useStyles: (props?: propType) => {
     container: object;

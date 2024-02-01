@@ -12,6 +12,7 @@ type propTypes = {
     wrapper?: keyof HTMLElementTagNameMap;
     onBackdrop?: (event?: Event, ref?: React.Ref<IModalRef>) => boolean | void;
     show?: boolean;
+    bgAlpha?: number;
 };
 declare const Modal: (props: propTypes & {
     children?: React.ReactNode;

@@ -35,6 +35,7 @@ type propTypes<T = unknown> = {
     loader?: boolean;
     type?: ColorSchemes;
     size?: Size;
+    bgAlpha?: number;
     rightIcon?: ButtonProps['rightIcon'];
     leftIcon?: ButtonProps['leftIcon'];
     disabled?: ButtonProps['disabled'];

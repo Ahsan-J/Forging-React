@@ -9,6 +9,7 @@ type propTypes<T = unknown> = {
     keyExtractor: string | number | ((item: T, index: number) => string | number);
     type?: ColorSchemes;
     size?: Size;
+    bgAlpha?: number;
 };
 declare function Timeline<T>(props: React.PropsWithChildren<propTypes<T>>): import("react/jsx-runtime").JSX.Element;
 export default Timeline;

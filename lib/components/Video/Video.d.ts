@@ -11,6 +11,7 @@ interface propTypes {
     title?: string;
     name?: HTMLInputElement['value'];
     type?: ColorSchemes;
+    bgAlpha?: number;
 }
 declare const Video: React.ForwardRefExoticComponent<propTypes & {
     children?: React.ReactNode;

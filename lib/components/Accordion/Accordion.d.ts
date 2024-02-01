@@ -1,4 +1,5 @@
 import React from 'react';
+import { ColorSchemes, Size } from "../../types/theme";
 type AccordionCustomHeaderProp = {
     key?: string;
     disabled?: boolean;
@@ -13,6 +14,9 @@ type propTypes = {
     multiple?: boolean;
     active?: Array<string | undefined>;
     renderCustomTitle?: (props: AccordionCustomHeaderProp) => React.ReactNode;
+    size?: Size;
+    bgAlpha?: number;
+    type?: ColorSchemes;
 };
 declare const Accordion: React.NamedExoticComponent<React.PropsWithChildren<propTypes>>;
 export default Accordion;

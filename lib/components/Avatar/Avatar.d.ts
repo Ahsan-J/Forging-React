@@ -16,6 +16,7 @@ type propTypes = {
     iconName?: IconNames;
     canPreview?: boolean;
     loader?: boolean;
+    bgAlpha?: number;
 };
 declare const Avatar: React.MemoExoticComponent<(props: PropsWithChildren<propTypes>) => import("react/jsx-runtime").JSX.Element>;
 export default Avatar;

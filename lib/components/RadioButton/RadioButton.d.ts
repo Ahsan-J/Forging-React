@@ -21,6 +21,7 @@ type propTypes<T = ObjectType<IRadioItem>> = {
     error?: string;
     keyEvents?: boolean;
     onFieldError?: (error: string) => void;
+    bgAlpha?: number;
 };
 declare function RadioButton<T extends ObjectType<IRadioItem>>(props: propTypes<T>): import("react/jsx-runtime").JSX.Element | null;
 export default RadioButton;

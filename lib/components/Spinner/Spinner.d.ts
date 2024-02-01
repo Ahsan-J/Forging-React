@@ -12,6 +12,7 @@ type propType = {
     size?: Size;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     viewBox?: string;
+    bgAlpha?: number;
 };
 export interface ISpinnerInstance {
     setLoader: React.Dispatch<React.SetStateAction<boolean>>;

@@ -13,6 +13,7 @@ type propTypes = {
     type?: ColorSchemes;
     title?: string;
     onCrop?: (output: File) => void;
+    bgAlpha?: number;
 };
 export interface ICropperRef {
     showModal: IModalRef['showModal'];

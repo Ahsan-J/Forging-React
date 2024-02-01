@@ -12,6 +12,7 @@ type propTypes = {
     size?: Size;
     rounded?: boolean;
     label?: string;
+    bgAlpha?: number;
 };
 export interface IProgressInstance {
     setProgress: React.Dispatch<React.SetStateAction<number>>;

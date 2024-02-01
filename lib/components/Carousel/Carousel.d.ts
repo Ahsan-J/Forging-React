@@ -12,6 +12,7 @@ type propType<T = unknown> = {
     renderItem: (item: T, index: number) => React.ReactNode;
     data: Array<T>;
     keyExtractor?: string | number | ((item: T) => string | number);
+    bgAlpha?: number;
 };
 export interface ICarouselRef {
     setSlideIndex: React.Dispatch<React.SetStateAction<number>>;

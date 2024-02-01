@@ -7,6 +7,7 @@ type propType = {
     id?: string;
     className?: string;
     type?: ColorSchemes;
+    bgAlpha?: number;
 };
 declare const Highlighter: React.NamedExoticComponent<propType>;
 export default Highlighter;

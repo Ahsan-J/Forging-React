@@ -9,5 +9,6 @@ declare const Textarea: React.ForwardRefExoticComponent<{
     inputClass?: string | undefined;
     size?: Size | undefined;
     helpText?: string | undefined;
+    bgAlpha?: number | undefined;
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement> & React.RefAttributes<HTMLTextAreaElement>>;
 export default Textarea;

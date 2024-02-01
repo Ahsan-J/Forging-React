@@ -8,6 +8,7 @@ type propType = {
     size?: Size;
     checked?: boolean;
     name?: string;
+    bgAlpha?: number;
 };
 declare const Switch: React.NamedExoticComponent<propType>;
 export default Switch;

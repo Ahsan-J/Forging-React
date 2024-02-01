@@ -12,6 +12,7 @@ interface propTypes {
     allowResize?: boolean;
     rounded?: boolean;
     type?: ColorSchemes;
+    bgAlpha?: number;
 }
 export interface IResizableRef {
     getData: () => DOMRect | null;

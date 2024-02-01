@@ -10,6 +10,7 @@ type propTypes = {
     strategy?: 'hide' | 'remove';
     renderCustomLabel?: (labelProps: React.ComponentProps<typeof TabHead>) => React.ReactNode;
     type?: ColorSchemes;
+    bgAlpha?: number;
 };
 declare const Tab: React.NamedExoticComponent<React.PropsWithChildren<propTypes>>;
 export default Tab;

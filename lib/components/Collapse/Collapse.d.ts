@@ -12,6 +12,7 @@ type propTypes = {
     onCollapse?: (state: boolean) => void;
     disabled?: boolean;
     type?: ColorSchemes;
+    bgAlpha?: number;
 };
 declare const Collapse: (props: propTypes & {
     children?: React.ReactNode;

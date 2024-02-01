@@ -13,6 +13,7 @@ type propType = {
     rounded?: boolean;
     outline?: boolean;
     label?: string;
+    bgAlpha?: number;
 };
 declare const CheckBox: React.NamedExoticComponent<propType>;
 export default CheckBox;
