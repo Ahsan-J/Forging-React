@@ -11,6 +11,6 @@ type propTypes = {
     theme?: "light" | "dark";
 };
 declare const NavBar: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<HTMLElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<HTMLElement>) => React.ReactElement | null;
 export default NavBar;

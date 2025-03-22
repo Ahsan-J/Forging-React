@@ -21,6 +21,6 @@ type propTypes = {
     bgAlpha?: number;
 };
 declare const DropdownItem: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<HTMLLIElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<HTMLLIElement>) => React.ReactElement | null;
 export default DropdownItem;

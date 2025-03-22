@@ -17,5 +17,5 @@ type propType = {
 export interface ISpinnerInstance {
     setLoader: React.Dispatch<React.SetStateAction<boolean>>;
 }
-declare const Spinner: (props: propType & React.RefAttributes<ISpinnerInstance>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const Spinner: (props: propType & React.RefAttributes<ISpinnerInstance>) => React.ReactElement | null;
 export default Spinner;

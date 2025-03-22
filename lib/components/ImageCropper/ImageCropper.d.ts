@@ -19,5 +19,5 @@ export interface ICropperRef {
     showModal: IModalRef['showModal'];
     outputImageFile?: File | null;
 }
-declare const ImageCropper: (props: propTypes & React.RefAttributes<ICropperRef>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const ImageCropper: (props: propTypes & React.RefAttributes<ICropperRef>) => React.ReactElement | null;
 export default ImageCropper;

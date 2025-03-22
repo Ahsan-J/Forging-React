@@ -15,6 +15,6 @@ export interface IDrawerRef {
     toggle: () => void;
 }
 declare const Drawer: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<IDrawerRef>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<IDrawerRef>) => React.ReactElement | null;
 export default Drawer;

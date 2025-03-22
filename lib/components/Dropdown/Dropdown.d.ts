@@ -43,5 +43,5 @@ type propTypes<T = unknown> = {
     rounded?: ButtonProps['rounded'];
     active?: ButtonProps['active'];
 };
-declare const _default: <T extends ObjectType<IDropdownItem>>(props: propTypes<T> & React.RefAttributes<IDropdownInstance<T>>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const _default: <T extends ObjectType<IDropdownItem>>(props: propTypes<T> & React.RefAttributes<IDropdownInstance<T>>) => React.ReactElement | null;
 export default _default;

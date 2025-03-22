@@ -23,6 +23,6 @@ export interface IToastRef {
     showToast: (param: showToastParameter) => void;
 }
 declare const Toast: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<IToastRef>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<IToastRef>) => React.ReactElement | null;
 export default Toast;

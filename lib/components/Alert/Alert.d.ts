@@ -12,6 +12,6 @@ type propTypes = {
     autoDismissTimeout?: number;
 };
 declare const Alert: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<HTMLDivElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<HTMLDivElement>) => React.ReactElement | null;
 export default Alert;

@@ -26,6 +26,6 @@ export interface IButtonRef {
     setLoader: (loader: boolean) => void;
 }
 declare const Button: (props: propType & {
-    children?: React.ReactNode;
-} & React.RefAttributes<IButtonRef & HTMLButtonElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<IButtonRef & HTMLButtonElement>) => React.ReactElement | null;
 export default Button;

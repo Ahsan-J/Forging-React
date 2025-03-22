@@ -1,15 +1,15 @@
 import React, { InputHTMLAttributes } from "react";
 import { ColorSchemes, Size } from "../../types/theme";
 declare const Input: (props: {
-    label?: string | undefined;
-    labelClass?: string | undefined;
-    type?: ColorSchemes | undefined;
-    htmlType?: InputHTMLAttributes<HTMLInputElement>['type'];
-    error?: string | boolean | undefined;
-    floating?: boolean | undefined;
-    inputClass?: string | undefined;
-    size?: Size | undefined;
-    helpText?: string | undefined;
-    bgAlpha?: number | undefined;
-} & Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "size"> & React.RefAttributes<HTMLInputElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    label?: string;
+    labelClass?: string;
+    type?: ColorSchemes;
+    htmlType?: InputHTMLAttributes<HTMLInputElement>["type"];
+    error?: boolean | string;
+    floating?: boolean;
+    inputClass?: string;
+    size?: Size;
+    helpText?: string;
+    bgAlpha?: number;
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "size"> & React.RefAttributes<HTMLInputElement>) => React.ReactElement | null;
 export default Input;

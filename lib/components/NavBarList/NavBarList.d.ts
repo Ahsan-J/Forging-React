@@ -15,5 +15,5 @@ type propTypes = {
     active?: INavItem['title'];
     onClick?: (title: INavItem['title'], event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 };
-declare const NavBarList: (props: propTypes & React.RefAttributes<HTMLUListElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const NavBarList: (props: propTypes & React.RefAttributes<HTMLUListElement>) => React.ReactElement | null;
 export default NavBarList;

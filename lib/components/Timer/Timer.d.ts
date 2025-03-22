@@ -16,6 +16,6 @@ export interface ITimerInstance {
     pause: () => void;
 }
 declare const Timer: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<ITimerInstance>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<ITimerInstance>) => React.ReactElement | null;
 export default Timer;

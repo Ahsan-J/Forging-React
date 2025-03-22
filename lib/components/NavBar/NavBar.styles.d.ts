@@ -1,9 +1,3 @@
-import { ColorSchemes } from '../../types/theme';
-type propType = {
-    type?: ColorSchemes;
-    theme?: string;
-};
-export declare const useStyles: (props?: propType) => {
+export declare const useStyles: () => {
     container: object;
 };
-export {};

@@ -5,7 +5,7 @@ import { ObjectType } from "../types/app";
  * @param {number} size - size of chunks to create
  * @returns {Array<Array<T>>}
  * */
-export declare const chunkArray: <T = unknown>(arr?: T[], size?: number) => T[][];
+export declare const chunkArray: <T = unknown>(arr?: Array<T>, size?: number) => Array<Array<T>>;
 /**
  * range creates a new numbered array.
  * @param {number} startIndex - Starting index of an array if lastIndex is specified. If lastIndex is not specified, it can act as a range length. Default to 0
@@ -34,7 +34,7 @@ export declare const mergeArrayByKey: (des?: Array<ObjectType>, src?: Array<Obje
  * @param {keyof T | ((item: T) => T[keyof T])} key - key of the object or a function that resolves to the key of the object
  * @returns {ObjectType}
  */
-export declare const groupBy: <T extends ObjectType<string | number | symbol>>(xs: T[], key: keyof T | ((item: T) => T[keyof T])) => { [key in T[keyof T]]?: T | T[] | undefined; };
+export declare const groupBy: <T extends ObjectType<string | number | symbol>>(xs: Array<T>, key: keyof T | ((item: T) => T[keyof T])) => { [key in T[keyof T]]?: T | T[] | undefined; };
 /**
  * Converts the other types of css measurement units into pixels.
  * @param {string} measurement - A floating number with the unit of measurement to calculate from. Currently supports "rem", "em", "pt", "pc", "in" and "cm" units and convert them to pixels
@@ -69,7 +69,7 @@ export declare const generateRandom: (min?: number, max?: number) => number;
  * @param {string} key - key of object in the array to filter with.
  * @returns a new array of objects with the values filtered
  */
-export declare const uniqueBy: <T extends ObjectType>(dataArray: T[], key: keyof T) => T[];
+export declare const uniqueBy: <T extends ObjectType>(dataArray: Array<T>, key: keyof T) => T[];
 /**
  * Returns a new hex code with alpha values applied
  * @param {string} hex - hex color string
@@ -88,7 +88,12 @@ export declare const deepEquals: (object1: unknown, object2: unknown) => boolean
  * @param {Function} function - function to memoize
  * @returns {Function} - memoized function
  */
-export declare const memoize: <T extends unknown[], R = unknown>(fn: (...args: T) => R) => (...args: T) => R;
+export declare const memoize: <T extends Array<unknown>, R = unknown>(fn: (...args: T) => R) => (...args: T) => R;
+/**
+ * Generates the random and unique UUID
+ * @returns {string} - The unique id
+ */
+export declare const getUniqueId: () => string;
 export declare const upperFirst: (s?: string) => string | undefined;
 export declare const isBrowser: () => boolean;
 export declare const toKebabCase: (s: string) => string;

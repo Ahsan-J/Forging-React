@@ -1,1 +1,1 @@
-export declare const useTimeoutCallback: (onClick?: ((...args: Array<unknown>) => unknown) | null | undefined, timeout?: number) => (...args: Array<unknown>) => unknown;
+export declare const useTimeoutCallback: (onClick?: null | ((...args: Array<unknown>) => unknown), timeout?: number) => (...args: Array<unknown>) => unknown;

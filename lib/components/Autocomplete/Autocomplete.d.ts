@@ -33,5 +33,5 @@ type propType<T = unknown> = {
     searchable?: boolean;
     bgAlpha?: number;
 };
-declare const _default: <T extends ObjectType<IDropdownItem>>(props: propType<T> & React.RefAttributes<HTMLInputElement>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const _default: <T extends ObjectType<IDropdownItem>>(props: propType<T> & React.RefAttributes<HTMLInputElement>) => React.ReactElement | null;
 export default _default;

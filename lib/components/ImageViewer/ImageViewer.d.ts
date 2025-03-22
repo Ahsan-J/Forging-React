@@ -19,5 +19,5 @@ export interface IImageViewer {
     setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
     downloadImageAtIndex: (index: number) => void;
 }
-declare const ImageViewer: (props: propTypes & React.RefAttributes<IImageViewer>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const ImageViewer: (props: propTypes & React.RefAttributes<IImageViewer>) => React.ReactElement | null;
 export default ImageViewer;

@@ -14,6 +14,6 @@ interface propTypes {
     bgAlpha?: number;
 }
 declare const Video: React.ForwardRefExoticComponent<propTypes & {
-    children?: React.ReactNode;
+    children?: React.ReactNode | undefined;
 } & React.RefAttributes<HTMLVideoElement>>;
 export default Video;

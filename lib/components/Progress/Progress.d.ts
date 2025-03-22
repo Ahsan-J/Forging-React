@@ -19,5 +19,5 @@ export interface IProgressInstance {
     progress: number;
     unsafeShowProgress: (p: number) => void;
 }
-declare const Progress: (props: propTypes & React.RefAttributes<IProgressInstance>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const Progress: (props: propTypes & React.RefAttributes<IProgressInstance>) => React.ReactElement | null;
 export default Progress;

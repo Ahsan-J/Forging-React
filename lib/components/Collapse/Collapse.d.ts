@@ -15,6 +15,6 @@ type propTypes = {
     bgAlpha?: number;
 };
 declare const Collapse: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<ICollapseRef>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<ICollapseRef>) => React.ReactElement | null;
 export default Collapse;

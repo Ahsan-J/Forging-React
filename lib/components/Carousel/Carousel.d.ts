@@ -17,5 +17,5 @@ type propType<T = unknown> = {
 export interface ICarouselRef {
     setSlideIndex: React.Dispatch<React.SetStateAction<number>>;
 }
-declare const _default: <T = unknown>(props: propType<T> & React.RefAttributes<ICarouselRef>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+declare const _default: <T = unknown>(props: propType<T> & React.RefAttributes<ICarouselRef>) => React.ReactElement | null;
 export default _default;

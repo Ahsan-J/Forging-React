@@ -15,6 +15,6 @@ type propTypes = {
     bgAlpha?: number;
 };
 declare const Modal: (props: propTypes & {
-    children?: React.ReactNode;
-} & React.RefAttributes<IModalRef>) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+    children?: React.ReactNode | undefined;
+} & React.RefAttributes<IModalRef>) => React.ReactElement | null;
 export default Modal;

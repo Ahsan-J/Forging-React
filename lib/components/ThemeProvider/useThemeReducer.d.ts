@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { IThemeConfig } from "../../types/theme";
-declare const useThemeReducer: (initialState: IThemeConfig) => [IThemeConfig & Partial<IThemeConfig>, import("react").Dispatch<Partial<IThemeConfig>>];
+declare const useThemeReducer: (initialState: IThemeConfig) => [IThemeConfig, import("react").ActionDispatch<[action: Partial<IThemeConfig>]>];
 export default useThemeReducer;
